@@ -1,0 +1,27 @@
+blog_index:
+  path:       /blog/{page}
+  controller: App\Controller\BlogController::list
+  defaults:
+    page: 1
+  requirements:
+    page: '\d+'
+
+blog_show:
+  path:       /blog/{slug}
+  controller: App\Controller\BlogController::show
+
+security_login:
+  path:       /login/
+  controller: App\Controller\SecurityController::login
+
+security_logout:
+  path:       /logout/
+  controller: App\Controller\SecurityController::logout
+
+user_edit:
+  path:       /profile/edit
+  controller: App\Controller\UserController::edit
+
+user_change_password:
+  path:       /profile/change-password
+  controller: App\Controller\UserController::changePassword
